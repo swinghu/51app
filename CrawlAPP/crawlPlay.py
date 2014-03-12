@@ -190,14 +190,21 @@ for category, app_type in [( x, y ) for x in categories for y in app_types]:
     url = 'https://play.google.com/store/apps/category/' + category + '/collection/topselling_' + app_type
     getApps( url )
 
-top_urls = ['https://play.google.com/store/apps/collection/topselling_paid_game',
-            'https://play.google.com/store/apps/collection/topselling_free',
-            'https://play.google.com/store/apps/collection/topselling_paid',
-            'https://play.google.com/store/apps/collection/topgrossing',
-            'https://play.google.com/store/apps/collection/topselling_new_paid_game',
-            'https://play.google.com/store/apps/collection/topselling_new_free',
-            'https://play.google.com/store/apps/collection/topselling_new_paid'
-            'https://play.google.com/store/apps/category/BOOKS_AND_REFERENCE']
+"""
+top_urls = ['https://play.google.com/store/apps/collection/topselling_paid_game',    #not hit
+            'https://play.google.com/store/apps/collection/topselling_free',            #hit
+            'https://play.google.com/store/apps/collection/topselling_paid',            #not hit
+            'https://play.google.com/store/apps/collection/topgrossing',                #not hit
+            'https://play.google.com/store/apps/collection/topselling_new_paid_game',   #not hit
+            'https://play.google.com/store/apps/collection/topselling_new_free',        #hit
+            'https://play.google.com/store/apps/collection/topselling_new_paid'         #not hit
+            'https://play.google.com/store/apps/category/BOOKS_AND_REFERENCE']          #hit
+"""          
+top_urls =[ 'https://play.google.com/store/apps/collection/topselling_free',
+                'https://play.google.com/store/apps/collection/topselling_new_free', 
+                'https://play.google.com/store/apps/category/BOOKS_AND_REFERENCE'
+               ]
+
 for url in top_urls:
     print( "Crawl collection - ", url )
     getApps( url )
