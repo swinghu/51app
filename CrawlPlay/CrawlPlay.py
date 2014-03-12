@@ -235,3 +235,4 @@ while apps_pending:
 errorUrls.close()
 print( 'Complete' )
 closeResultFiles( fileHandlers )
+

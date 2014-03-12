@@ -25,7 +25,7 @@ def convertJsonDataIntoTSV( jsonData ):
     for downloads in jsonData['downloads'].split( '-' ):
         data.append( downloads.strip().replace( ',', '' ) )
 
-    data.append( str( 0 ) if jsonData['price'] == 'Free' else str( jsonData['price'] ).strip( 'Rs. ' ).strip().replace( ',', '' ) )
+    data.append( str( 0 ) if jsonData['price'] == 'Free' else str( jsonData['price'] ).strip( 'Rs.??' ).strip().replace( ',', '' ) )
     data.append( 'Rs.' )
     return "\t".join( data )
 

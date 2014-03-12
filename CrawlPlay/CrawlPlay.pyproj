@@ -3,16 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3dd5f091-c5c8-42da-a76b-4302341a61b6</ProjectGuid>
+    <ProjectGuid>e66c9d2d-365a-476d-aaaf-4f34894689bf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>CrawlPlay.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>CrawlAPP</Name>
-    <RootNamespace>CrawlAPP</RootNamespace>
+    <Name>CrawlPlay</Name>
+    <RootNamespace>CrawlPlay</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,8 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="crawlDroidmeter.py" />
-    <Compile Include="crawlItunesStore.py" />
+    <Compile Include="CrawlPlay.py" />
     <Compile Include="crawlResultToTSV.py" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
